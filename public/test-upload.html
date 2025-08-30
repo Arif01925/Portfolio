@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Upload</title>
+</head>
+<body>
+  <h2>Manual Product Upload Test</h2>
+  <form action="save-product.php" method="POST" enctype="multipart/form-data">
+    <label>Product Name: <input name="name" /></label><br />
+    <label>Category: <input name="category" /></label><br />
+    <label>Base Size: <input name="base_size" /></label><br />
+    <label>Description: <input name="description" /></label><br />
+    <label>Ingredients: <input name="ingredients" /></label><br />
+    <label>Main Image: <input type="file" name="main_image" /></label><br />
+
+    <input type="hidden" name="variant_count" value="1" />
+
+    <h4>Variant 1:</h4>
+    <label>Type: <input name="variants[0][variant_type]" /></label><br />
+    <label>Pack Size: <input name="variants[0][pack_size]" /></label><br />
+    <label>Price: <input name="variants[0][price]" /></label><br />
+    <label>Weight (lb): <input name="variants[0][weight_lb]" /></label><br />
+    <label>Dimensions: <input name="variants[0][dimensions]" /></label><br />
+    <label>Image: <input type="file" name="variants[0][image]" /></label><br />
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
