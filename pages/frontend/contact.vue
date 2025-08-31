@@ -35,6 +35,9 @@
             <p>arif01925@gmail.com</p>
           </div>
         </div>
+
+      </div>
+
       <!-- Right: Contact Form -->
       <form class="bg-white shadow p-8 rounded-xl space-y-4">
         <input type="text" placeholder="Your Name" class="w-full border border-gray-300 px-4 py-2 rounded" />
