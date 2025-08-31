@@ -32,7 +32,7 @@
           </div>
           <div>
             <h3 class="font-semibold">Email Address</h3>
-            <p>chefkproduct.owner@gmail.com</p>
+            <p>arif01925@gmail.com</p>
           </div>
         </div>
 
