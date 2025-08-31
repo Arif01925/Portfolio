@@ -12,7 +12,7 @@
           </div>
           <div>
             <h3 class="font-semibold">Our Location</h3>
-            <p>2266 5th Avenue, Suite 486<br />New York, NY 10037</p>
+            <p>108 Edwin Ave., <br />Waterburry, CT 06708</p>
           </div>
         </div>
 
