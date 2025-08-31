@@ -35,27 +35,6 @@
             <p>arif01925@gmail.com</p>
           </div>
         </div>
-
-        <!-- Social Media Icons -->
-        <div class="flex items-center gap-4 pt-6">
-          <a href="https://facebook.com" target="_blank" title="Facebook">
-            <img src="/icons/facebook.svg" alt="Facebook" class="w-6 h-6 hover:scale-110 transition" />
-          </a>
-          <a href="https://instagram.com" target="_blank" title="Instagram">
-            <img src="/icons/instagram.svg" alt="Instagram" class="w-6 h-6 hover:scale-110 transition" />
-          </a>
-          <a href="https://linkedin.com" target="_blank" title="LinkedIn">
-            <img src="/icons/linkedin.svg" alt="LinkedIn" class="w-6 h-6 hover:scale-110 transition" />
-          </a>
-          <a href="https://pinterest.com" target="_blank" title="Pinterest">
-            <img src="/icons/pinterest.svg" alt="Pinterest" class="w-6 h-6 hover:scale-110 transition" />
-          </a>
-          <a href="https://tiktok.com" target="_blank" title="TikTok">
-            <img src="/icons/tiktok.svg" alt="TikTok" class="w-6 h-6 hover:scale-110 transition" />
-          </a>
-        </div>
-      </div>
-
       <!-- Right: Contact Form -->
       <form class="bg-white shadow p-8 rounded-xl space-y-4">
         <input type="text" placeholder="Your Name" class="w-full border border-gray-300 px-4 py-2 rounded" />
