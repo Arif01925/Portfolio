@@ -22,7 +22,7 @@
           </div>
           <div>
             <h3 class="font-semibold">Phone Number</h3>
-            <p>1-646-778-8396</p>
+            <p>+8801925466746</p>
           </div>
         </div>
 
