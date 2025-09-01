@@ -28,16 +28,16 @@
 
 
           <div class="flex justify-center space-x-4 my-4">
-          <a href="#" class="w-10 h-10 rounded-full bg-[#1e293b] flex items-center justify-center hover:bg-blue-600 text-white">
+          <a href="https://wa.me/8801925466746" target="_blank" class="w-10 h-10 rounded-full bg-[#1e293b] flex items-center justify-center hover:bg-blue-600 text-white">
           <i class="fab fa-whatsapp"></i>
           </a>
-          <a href="#" class="w-10 h-10 rounded-full bg-[#1e293b] flex items-center justify-center hover:bg-blue-600 text-white">
+          <a href="https://facebook.com/arif01925" target="_blank" class="w-10 h-10 rounded-full bg-[#1e293b] flex items-center justify-center hover:bg-blue-600 text-white">
           <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="#" class="w-10 h-10 rounded-full bg-[#1e293b] flex items-center justify-center hover:bg-blue-600 text-white">
+          <a href="https://instagram.com/arif01925in" target="_blank" class="w-10 h-10 rounded-full bg-[#1e293b] flex items-center justify-center hover:bg-blue-600 text-white">
           <i class="fab fa-instagram"></i>
           </a>
-          <a href="#" class="w-10 h-10 rounded-full bg-[#1e293b] flex items-center justify-center hover:bg-blue-600 text-white">
+          <a href="https://www.linkedin.com/in/arif01925/" target="_blank" class="w-10 h-10 rounded-full bg-[#1e293b] flex items-center justify-center hover:bg-blue-600 text-white">
           <i class="fab fa-linkedin"></i>
           </a>
           </div>
