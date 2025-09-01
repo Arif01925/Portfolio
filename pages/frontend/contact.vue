@@ -8,7 +8,7 @@
       <div class="space-y-8">
         <div class="flex items-start gap-4">
           <div class="bg-green-50 p-4 rounded">
-            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 10l9-7 9 7v11a2 2 0 01-2 2h-2a2 2 0 01-2-2V12H9v9a2 2 0 01-2 2H5a2 2 0 01-2-2V10z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg"  class="w-6 h-6 text-green-600"    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">  <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c1.657 0 3-1.343 3-3s-1.343-3-3-3-3            1.343-3 3 1.343 3 3 3z" /> <path stroke-linecap="round" stroke-linejoin="round"    d="M12 22s7-4.5 7-11a7 7 0 10-14 0c0 6.5 7 11 7 11z" />  </svg>
           </div>
           <div>
             <h3 class="font-semibold">Our Location</h3>
@@ -18,17 +18,17 @@
 
         <div class="flex items-start gap-4">
           <div class="bg-green-50 p-4 rounded">
-            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 5h2l3.6 7.59L5.25 17H19v2H5.25a1.25 1.25 0 01-1.2-1.6L6.6 10.4 4 5z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg"  class="w-6 h-6 text-green-600"  fill="none"   viewBox="0 0 24 24" stroke="currentColor"  stroke-width="1">  <path stroke-linecap="round" stroke-linejoin="round"    d="M3 5a2 2 0 012-2h2.28a1 1 0 01.948.684l1.5 4.5a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.5 1.5a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.163 21 3 14.837 3 7V5z" />  </svg>
           </div>
           <div>
             <h3 class="font-semibold">Phone Number</h3>
             <p>+8801925466746</p>
           </div>
         </div>
-
         <div class="flex items-start gap-4">
           <div class="bg-green-50 p-4 rounded">
-            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 12H8m8 0l-3.5-3.5M16 12l-3.5 3.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">  <path stroke-linecap="round" stroke-linejoin="round"     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /> </svg>
+
           </div>
           <div>
             <h3 class="font-semibold">Email Address</h3>
