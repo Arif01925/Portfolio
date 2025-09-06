@@ -1,5 +1,5 @@
 <template>
-  <aside class="fixed left-0 top-0 w-1/5 h-screen">
+  <aside class="fixed left-0 top-0 w-1/5 h-screen flex items-center">
     <!-- Glowing border shell -->
     <div class="relative p-[2px] rounded-2xl glowing-border">
       <!-- Inner card with your info -->
@@ -93,3 +93,4 @@ onMounted(() => {
   }
 }
 </style>
+
