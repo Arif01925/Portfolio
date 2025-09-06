@@ -9,8 +9,8 @@ definePageMeta({
   <section class="bg-[#0f172a] text-white min-h-screen px-6 py-12">
     <div class="text-center">
       <h1 class="text-4xl font-bold mb-4">Boost Business Strategic Solutions with Us</h1>
-      <p class="text-gray-300 max-w-3xl mx-auto">
-        Hello! I’m Fatima, a passionate web developer, graphic designer, and data analyst...
+      <p class="text-gray-300 max-w-3xl mx-auto align-left">
+        Hello! I’m Arifur, a passionate graphic designer, and virtual Assistant, Smart AI User for creating full functional Website....
       </p>
     </div>
 
