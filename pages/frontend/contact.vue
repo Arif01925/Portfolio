@@ -1,55 +1,61 @@
+
 <template>
-  <section class="max-w-7xl mx-auto px-6 py-16">
-    <h2 class="text-green-600 font-medium mb-2">Contact Us</h2>
-    <h1 class="text-3xl font-bold mb-10">GET IN TOUCH WITH US</h1>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-      <!-- Left: Info -->
-      <div class="space-y-8">
-        <div class="flex items-start gap-4">
-          <div class="bg-green-50 p-4 rounded">
-            <svg xmlns="http://www.w3.org/2000/svg"  class="w-6 h-6 text-green-600"    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">  <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c1.657 0 3-1.343 3-3s-1.343-3-3-3-3            1.343-3 3 1.343 3 3 3z" /> <path stroke-linecap="round" stroke-linejoin="round"    d="M12 22s7-4.5 7-11a7 7 0 10-14 0c0 6.5 7 11 7 11z" />  </svg>
-          </div>
+  <div class="text-white">
+    <section class="max-w-6xl mx-auto px-6 py-12">
+      <div class="border border-[#222] p-10 rounded-2xl mb-12 bg-[#181c2a]">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <!-- Left: Heading and contact info -->
           <div>
-            <h3 class="font-semibold">Our Location</h3>
-            <p>108 Edwin Ave, Waterburry, CT 06708</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-8">Get Ready To<br/>Create Great</h2>
+            <div class="space-y-6">
+              <div class="flex items-center gap-4">
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#23263a] border border-[#333]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m8 0a4 4 0 11-8 0 4 4 0 018 0zm0 0v4m0-4V8" /></svg>
+                </span>
+                <div>
+                  <div class="text-gray-300 text-sm">E-mail:</div>
+                  <div class="text-white font-medium">arif01925@gmail.com</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#23263a] border border-[#333]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.104 0 2-.896 2-2s-.896-2-2-2-2 .896-2 2 .896 2 2 2zm0 0v6m0-6V5" /></svg>
+                </span>
+                <div>
+                  <div class="text-gray-300 text-sm">Location:</div>
+                  <div class="text-white font-medium">Delowara Villa, C&B Road, Barishal, Bangladesh.</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#23263a] border border-[#333]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.104 0 2-.896 2-2s-.896-2-2-2-2 .896-2 2 .896 2 2 2zm0 0v6m0-6V5" /></svg>
+                </span>
+                <div>
+                  <div class="text-gray-300 text-sm">Contact:</div>
+                  <div class="text-white font-medium">+88 0192 546 6746</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Form -->
+          <div>
+            <h3 class="text-2xl font-bold text-white mb-6">GET IN TOUCH</h3>
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input type="text" placeholder="Your Name" class="p-4 rounded bg-[#181c2a] border border-[#333] text-white placeholder-gray-400" />
+              <input type="text" placeholder="Phone Number" class="p-4 rounded bg-[#181c2a] border border-[#333] text-white placeholder-gray-400" />
+              <input type="text" placeholder="Your Email" class="p-4 rounded bg-[#181c2a] border border-[#333] text-white placeholder-gray-400 md:col-span-2" />
+              <input type="text" placeholder="Subject" class="p-4 rounded bg-[#181c2a] border border-[#333] text-white placeholder-gray-400 md:col-span-2" />
+              <textarea placeholder="Your Message" class="col-span-1 md:col-span-2 p-4 rounded bg-[#181c2a] border border-[#333] text-white placeholder-gray-400" rows="5"></textarea>
+              <div class="col-span-1 md:col-span-2">
+                <button class="w-full bg-pink-500 text-white py-4 rounded-full font-semibold text-lg">Appointment Now →</button>
+              </div>
+            </form>
           </div>
         </div>
-
-        <div class="flex items-start gap-4">
-          <div class="bg-green-50 p-4 rounded">
-            <svg xmlns="http://www.w3.org/2000/svg"  class="w-6 h-6 text-green-600"  fill="none"   viewBox="0 0 24 24" stroke="currentColor"  stroke-width="1">  <path stroke-linecap="round" stroke-linejoin="round"    d="M3 5a2 2 0 012-2h2.28a1 1 0 01.948.684l1.5 4.5a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.5 1.5a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.163 21 3 14.837 3 7V5z" />  </svg>
-          </div>
-          <div>
-            <h3 class="font-semibold">Phone Number</h3>
-            <p>+8801925466746</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-4">
-          <div class="bg-green-50 p-4 rounded">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">  <path stroke-linecap="round" stroke-linejoin="round"     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /> </svg>
-
-          </div>
-          <div>
-            <h3 class="font-semibold">Email Address</h3>
-            <p>arif01925@gmail.com</p>
-          </div>
-        </div>
-
       </div>
-
-      <!-- Right: Contact Form -->
-      <form class="bg-white shadow p-8 rounded-xl space-y-4">
-        <input type="text" placeholder="Your Name" class="w-full border border-gray-300 px-4 py-2 rounded" />
-        <input type="email" placeholder="Your Email" class="w-full border border-gray-300 px-4 py-2 rounded" />
-        <input type="text" placeholder="Your Phone" class="w-full border border-gray-300 px-4 py-2 rounded" />
-        <textarea placeholder="Your Message" rows="5" class="w-full border border-gray-300 px-4 py-2 rounded"></textarea>
-        <button type="submit" class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition">
-          Send Message
-        </button>
-      </form>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script setup>

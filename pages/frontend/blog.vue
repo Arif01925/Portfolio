@@ -1,103 +1,53 @@
 <template>
-  <section class="max-w-6xl mx-auto px-6 py-16">
-    <h1 class="text-2xl font-bold mb-4">BE A PARTNER WITH US</h1>
+  <div class="text-white">
+    <!-- Posts Grid -->
+    <section class="max-w-6xl mx-auto px-6 py-16">
+      <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <article v-for="post in posts" :key="post.id" class="bg-[#0b0b0b] rounded-xl p-4 border border-[#1f1f1f] shadow-md">
+          <div class="relative overflow-hidden rounded-lg mb-4">
+                  <img :src="post.thumbnail || post.image || '/images/tmp/default.jpg'" :alt="post.title" class="w-full h-48 object-cover rounded-lg" />
+                  <div class="absolute top-3 left-3 bg-[#111111cc] text-xs text-gray-200 rounded-full px-3 py-1 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M19 3v4M4 7h16M6 21h12a2 2 0 002-2V7H4v12a2 2 0 002 2z"/></svg>
+                    <span v-if="post.author">{{ post.author }}</span>
+                    <span v-if="post.author" class="text-gray-400">•</span>
+                    <span>{{ post.date }}</span>
+                  </div>
+                </div>
 
-    <p class="mb-4">
-      <strong>Be a Partner with Chef K Product</strong><br />
-      Join us in spreading the love for unique, healthy beverage products. Partner with Chef K Product to offer exceptional, natural drinks to your customers. Our products are known for their quality and health-conscious choices.
-    </p>
+          <h2 class="text-lg font-semibold mb-2 hover:text-pink-400 cursor-pointer">{{ post.title }}</h2>
+          <p class="text-sm text-gray-400 mb-4">{{ post.excerpt }}</p>
 
-    <p class="mb-4"><strong>Partner with Us:</strong></p>
-    <ul class="list-disc list-inside mb-6 space-y-1">
-      <li><strong>Retailers and Distributors:</strong> Expand your product portfolio with our unique beverages.</li>
-      <li><strong>Food Service Providers:</strong> Elevate your menu with our distinctive flavors.</li>
-      <li><strong>Collaborations:</strong> Let’s create something extraordinary together.</li>
-    </ul>
-
-    <form class="bg-gray-100 p-6 rounded-lg shadow space-y-4">
-      <div class="grid md:grid-cols-2 gap-4">
-        <input type="text" placeholder="Enter Full Name" class="w-full border px-4 py-2 rounded" />
-        <input type="email" placeholder="Enter Email Address" class="w-full border px-4 py-2 rounded" />
-        <input type="tel" placeholder="Enter Phone" class="w-full border px-4 py-2 rounded" />
+          <div class="flex items-center justify-between">
+            <a :href="`/frontend/blog/${post.slug || post.id}`" class="text-xs text-gray-300 hover:text-pink-400">READ MORE ›</a>
+            <div class="flex items-center gap-3 text-gray-400 text-xs">
+              <span class="px-2 py-1 border border-[#222] rounded">{{ post.category }}</span>
+            </div>
+          </div>
+        </article>
       </div>
 
-      <!-- Dynamic Country & State -->
-      <div class="grid md:grid-cols-2 gap-4">
-        <select v-model="selectedCountry" class="w-full border px-4 py-2 rounded">
-          <option disabled value="">Choose a country</option>
-          <option v-for="country in countryList" :key="country.name" :value="country.name">
-            {{ country.name }}
-          </option>
-        </select>
-
-        <select v-model="selectedState" class="w-full border px-4 py-2 rounded" :disabled="!selectedCountry">
-          <option disabled value="">Select a State</option>
-          <option v-for="state in filteredStates" :key="state.name" :value="state.name">
-            {{ state.name }}
-          </option>
-        </select>
+      <!-- Pagination placeholder -->
+      <div class="mt-12 flex justify-center">
+        <nav class="flex items-center gap-3 text-sm text-gray-400">
+          <button class="px-3 py-2 bg-[#0b0b0b] border border-[#1f1f1f] rounded">Prev</button>
+          <button class="px-3 py-2 bg-[#0b0b0b] border border-[#1f1f1f] rounded">1</button>
+          <button class="px-3 py-2 bg-[#0b0b0b] border border-[#1f1f1f] rounded">2</button>
+          <button class="px-3 py-2 bg-[#0b0b0b] border border-[#1f1f1f] rounded">Next</button>
+        </nav>
       </div>
-
-      <div class="grid md:grid-cols-2 gap-4">
-        <input type="text" placeholder="Enter Zip Code" class="w-full border px-4 py-2 rounded" />
-        <input type="text" placeholder="Enter City" class="w-full border px-4 py-2 rounded" />
-      </div>
-
-      <textarea rows="3" placeholder="Enter Address" class="w-full border px-4 py-2 rounded"></textarea>
-
-      <div class="grid md:grid-cols-2 gap-4">
-        <select class="w-full border px-4 py-2 rounded">
-          <option disabled selected>How did you hear about us?</option>
-          <option>Facebook</option>
-          <option>Instagram</option>
-          <option>Search Engine</option>
-          <option>Referral</option>
-        </select>
-
-        <select class="w-full border px-4 py-2 rounded">
-          <option disabled selected>Choose Business Type</option>
-          <option>Retailer</option>
-          <option>Distributor</option>
-          <option>Food Service</option>
-        </select>
-      </div>
-
-      <textarea rows="4" placeholder="Enter Provide Your Business Proposal" class="w-full border px-4 py-2 rounded"></textarea>
-
-      <div class="text-center pt-4">
-        <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition">
-          Submit
-        </button>
-      </div>
-    </form>
   </section>
+  </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
-import countriesData from '~/assets/data/countries.json'
+import { useFetch } from '#app'
 
-definePageMeta({
-  alias: ['/partner'],
-  layout: 'default'
-})
+// Fetch blog posts from the server API (SSR-friendly)
+const { data: posts, error } = await useFetch('/api/blogs', { default: () => [] })
 
-const selectedCountry = ref('')
-const selectedState = ref('')
-const countryList = ref([])
-const stateMap = ref({})
-
-// Load country list and map states
-onMounted(() => {
-  countryList.value = countriesData
-
-  // Convert states to lookup by country name
-  countriesData.forEach(country => {
-    stateMap.value[country.name] = country.states || []
-  })
-})
-
-const filteredStates = computed(() => {
-  return stateMap.value[selectedCountry.value] || []
-})
+if (error.value) {
+  // Fallback to empty array if fetch fails
+  console.error('Failed to load posts', error.value)
+}
 </script>
+
