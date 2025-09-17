@@ -3,27 +3,27 @@
 
       <!-- Education + Experiences sections -->
       <div class="mt-10">
-        <h2 class="text-3xl font-bold text-white mb-6">Education</h2>
+        <h2 class="text-3xl font-bold text-white mb-6 animate-on-scroll" data-index="0">Education</h2>
         <div class="grid gap-6 md:grid-cols-2">
-          <div class="resume-card p-6 rounded-2xl">
+          <div class="resume-card p-6 rounded-2xl animate-on-scroll" data-index="1">
             <h3 class="text-lg font-semibold text-white mb-2">Trainer Marketing</h3>
             <p class="text-blue-600 font-bold mb-3">2005-2009</p>
             <p class="text-gray-400">A personal portfolio is a curated collection of an individual's professional work, showcasing their skills, experience A personal portfolio.</p>
           </div>
 
-          <div class="resume-card p-6 rounded-2xl">
+          <div class="resume-card p-6 rounded-2xl animate-on-scroll" data-index="2">
             <h3 class="text-lg font-semibold text-white mb-2">Assistant Director</h3>
             <p class="text-blue-600 font-bold mb-3">2010-2014</p>
             <p class="text-gray-400">Each project here showcases my commitment to excellence and adaptability, tailored to meet each client's unique needs.</p>
           </div>
 
-          <div class="resume-card p-6 rounded-2xl">
+          <div class="resume-card p-6 rounded-2xl animate-on-scroll" data-index="3">
             <h3 class="text-lg font-semibold text-white mb-2">Design Assistant</h3>
             <p class="text-blue-600 font-bold mb-3">2008-2012</p>
             <p class="text-gray-400">I've had the privilege of working with various clients, from startups to established companies, helping bring their visions to life.</p>
           </div>
 
-          <div class="resume-card p-6 rounded-2xl">
+          <div class="resume-card p-6 rounded-2xl animate-on-scroll" data-index="4">
             <h3 class="text-lg font-semibold text-white mb-2">Design Assistant</h3>
             <p class="text-blue-600 font-bold mb-3">2008-2012</p>
             <p class="text-gray-400">Each project here showcases my commitment to excellence and adaptability, tailored to meet each client's unique needs a personal.</p>
@@ -33,21 +33,21 @@
 
       <div class="mt-12 md:flex items-start gap-8">
         <div class="md:w-1/2">
-          <img src="https://mcusercontent.com/f2f8f3acd26a96e38ec184680/images/d4b41f09-7f3a-f4e9-90eb-89bd5672c91c.png" alt="Product bottle" class="w-full rounded-3xl object-cover shadow-lg" />
+          <img src="https://mcusercontent.com/f2f8f3acd26a96e38ec184680/images/d4b41f09-7f3a-f4e9-90eb-89bd5672c91c.png" alt="Product bottle" class="w-full rounded-3xl object-cover shadow-lg animate-on-scroll" data-index="5" />
         </div>
 
         <div class="md:w-1/2">
-          <h2 class="text-3xl font-bold text-white mb-6">Experiences</h2>
+          <h2 class="text-3xl font-bold text-white mb-6 animate-on-scroll" data-index="6">Experiences</h2>
 
           <div class="space-y-8">
-            <div class="experience-item">
+            <div class="experience-item animate-on-scroll" data-index="7">
               <span class="text-blue-600 uppercase text-sm font-semibold">experience</span>
               <h3 class="text-2xl font-bold text-white mt-2">Fatima Asrafy</h3>
               <p class="text-gray-400">UI/UX Designer</p>
               <p class="text-gray-500 mt-3">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum desi dolore eu fugiat nulla pariatur Duis aute irure</p>
             </div>
 
-            <div class="experience-item">
+            <div class="experience-item animate-on-scroll" data-index="8">
               <span class="text-blue-600 uppercase text-sm font-semibold">experience</span>
               <h3 class="text-2xl font-bold text-white mt-2">Fatima Asrafy</h3>
               <p class="text-gray-400">UI/UX Designer</p>

@@ -1,9 +1,9 @@
 <template>
   <section class="py-16 px-6 md:px-20">
-    <h2 class="text-white text-3xl font-semibold text-center mb-10">My Work</h2>
+    <h2 class="text-white text-3xl font-semibold text-center mb-10 animate-on-scroll" data-index="0">My Work</h2>
 
     <!-- Filter Buttons -->
-    <div class="flex flex-wrap gap-4 justify-center mb-12">
+  <div class="flex flex-wrap gap-4 justify-center mb-12 animate-on-scroll" data-index="1">
       <button
   @click="selectedCategory = 'All'"
   :class="[
@@ -36,9 +36,10 @@
     <!-- Projects Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
       <div
-        v-for="project in filteredProjects"
+        v-for="(project, idx) in filteredProjects"
         :key="project.id"
-        class="group bg-[#0d1117] p-4 rounded-xl hover:bg-[#1a1f2e] transition duration-300"
+        :class="['group bg-[#0d1117] p-4 rounded-xl hover:bg-[#1a1f2e] transition duration-300 animate-on-scroll', {'in-view': false}]"
+        :data-index="idx + 2"
       >
         <NuxtLink :to="`/frontend/projects/${project.id}`" class="block overflow-hidden rounded-lg mb-3">
         <img

@@ -3,7 +3,7 @@
     <!-- Posts Grid -->
     <section class="max-w-6xl mx-auto px-6 py-16">
       <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        <article v-for="post in posts" :key="post.id" class="bg-[#0b0b0b] rounded-xl p-4 border border-[#1f1f1f] shadow-md">
+        <article v-for="(post, idx) in posts" :key="post.id" :class="'bg-[#0b0b0b] rounded-xl p-4 border border-[#1f1f1f] shadow-md animate-on-scroll'" :data-index="idx">
           <div class="relative overflow-hidden rounded-lg mb-4">
                   <img :src="post.thumbnail || post.image || '/images/tmp/default.jpg'" :alt="post.title" class="w-full h-48 object-cover rounded-lg" />
                   <div class="absolute top-3 left-3 bg-[#111111cc] text-xs text-gray-200 rounded-full px-3 py-1 flex items-center gap-2">
@@ -27,7 +27,7 @@
       </div>
 
       <!-- Pagination placeholder -->
-      <div class="mt-12 flex justify-center">
+      <div class="mt-12 flex justify-center animate-on-scroll" data-index="10">
         <nav class="flex items-center gap-3 text-sm text-gray-400">
           <button class="px-3 py-2 bg-[#0b0b0b] border border-[#1f1f1f] rounded">Prev</button>
           <button class="px-3 py-2 bg-[#0b0b0b] border border-[#1f1f1f] rounded">1</button>
