@@ -4,7 +4,7 @@
     <section class="py-12">
       <div class="max-w-6xl mx-auto px-6 text-center">
         <h1 class="text-4xl font-bold">Blog Details</h1>
-        <nav class="text-sm text-gray-400 mt-2">Home <span class="text-pink-400">/ Blog Details</span></nav>
+  <nav class="text-sm text-gray-400 mt-2">Home <span class="text-blue-600">/ Blog Details</span></nav>
       </div>
     </section>
 
@@ -48,7 +48,7 @@
             <input v-model="comment.name" type="text" placeholder="Name" class="w-full p-3 rounded bg-[#0a0a0a] border border-[#222]" />
             <input v-model="comment.email" type="email" placeholder="Email" class="w-full p-3 rounded bg-[#0a0a0a] border border-[#222]" />
             <textarea v-model="comment.message" placeholder="Message" rows="4" class="w-full p-3 rounded bg-[#0a0a0a] border border-[#222]"></textarea>
-            <button class="px-6 py-3 bg-pink-500 rounded text-white">Submit Now</button>
+            <button class="px-6 py-3 bg-blue-600 rounded text-white">Submit Now</button>
           </form>
         </div>
       </article>

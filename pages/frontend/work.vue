@@ -104,8 +104,12 @@ const filteredProjects = computed(() => {
   if (selectedCategory.value === 'All') return projects.value
   return projects.value.filter(p => p.type === selectedCategory.value)
 })
-</script>
 
+definePageMeta({
+  alias: ['/work'],
+  layout: 'default'
+})
+</script>
 <style scoped>
 @keyframes outline-glow {
   0% {
@@ -127,3 +131,4 @@ const filteredProjects = computed(() => {
   animation: outline-glow 2s infinite ease-in-out;
 }
 </style>
+

@@ -14,11 +14,11 @@
                   </div>
                 </div>
 
-          <h2 class="text-lg font-semibold mb-2 hover:text-pink-400 cursor-pointer">{{ post.title }}</h2>
+          <h2 class="text-lg font-semibold mb-2 hover:text-blue-600 cursor-pointer">{{ post.title }}</h2>
           <p class="text-sm text-gray-400 mb-4">{{ post.excerpt }}</p>
 
           <div class="flex items-center justify-between">
-            <a :href="`/frontend/blog/${post.slug || post.id}`" class="text-xs text-gray-300 hover:text-pink-400">READ MORE ›</a>
+            <a :href="`/frontend/blog/${post.slug || post.id}`" class="text-xs text-gray-300 hover:text-blue-600">READ MORE ›</a>
             <div class="flex items-center gap-3 text-gray-400 text-xs">
               <span class="px-2 py-1 border border-[#222] rounded">{{ post.category }}</span>
             </div>
@@ -49,5 +49,10 @@ if (error.value) {
   // Fallback to empty array if fetch fails
   console.error('Failed to load posts', error.value)
 }
+
+definePageMeta({
+  alias: ['/blog'],
+  layout: 'default'
+})
 </script>
 
