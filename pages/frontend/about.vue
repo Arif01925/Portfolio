@@ -6,25 +6,25 @@
       <!-- Service cards -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
         <div class="bg-[#0b0b0b] p-6 rounded-xl border border-[#1f1f1f] text-center">
-          <div class="text-pink-400 mb-4">🔧</div>
+          <div class="text-blue-400 mb-4">🔧</div>
           <h4 class="font-semibold">Web Design</h4>
           <p class="text-sm text-gray-400">120 Projects</p>
         </div>
 
         <div class="bg-[#0b0b0b] p-6 rounded-xl border border-[#1f1f1f] text-center">
-          <div class="text-pink-400 mb-4">⚙️</div>
+          <div class="text-blue-400 mb-4">⚙️</div>
           <h4 class="font-semibold">Ui/Ux Design</h4>
           <p class="text-sm text-gray-400">241 Projects</p>
         </div>
 
         <div class="bg-[#0b0b0b] p-6 rounded-xl border border-[#1f1f1f] text-center">
-          <div class="text-pink-400 mb-4">💡</div>
+          <div class="text-blue-400 mb-4">💡</div>
           <h4 class="font-semibold">Web Research</h4>
           <p class="text-sm text-gray-400">240 Projects</p>
         </div>
 
         <div class="bg-[#0b0b0b] p-6 rounded-xl border border-[#1f1f1f] text-center">
-          <div class="text-pink-400 mb-4">✉️</div>
+          <div class="text-blue-400 mb-4">✉️</div>
           <h4 class="font-semibold">Marketing</h4>
           <p class="text-sm text-gray-400">331 Project</p>
         </div>
@@ -37,22 +37,22 @@
           <div class="space-y-4">
             <div>
               <div class="flex justify-between mb-1"><span>PHOTOSHOP</span><span>100%</span></div>
-              <div class="bg-[#111] h-2 rounded-md"><div class="bg-pink-500 h-2 rounded-md w-full"></div></div>
+              <div class="bg-[#111] h-2 rounded-md"><div class="bg-blue-600 h-2 rounded-md w-full"></div></div>
             </div>
 
             <div>
               <div class="flex justify-between mb-1"><span>FIGMA</span><span>95%</span></div>
-              <div class="bg-[#111] h-2 rounded-md"><div class="bg-pink-500 h-2 rounded-md w-[95%]"></div></div>
+              <div class="bg-[#111] h-2 rounded-md"><div class="bg-blue-600 h-2 rounded-md w-[95%]"></div></div>
             </div>
 
             <div>
               <div class="flex justify-between mb-1"><span>ADOBE XD</span><span>60%</span></div>
-              <div class="bg-[#111] h-2 rounded-md"><div class="bg-pink-500 h-2 rounded-md w-[60%]"></div></div>
+              <div class="bg-[#111] h-2 rounded-md"><div class="bg-blue-600 h-2 rounded-md w-[60%]"></div></div>
             </div>
 
             <div>
               <div class="flex justify-between mb-1"><span>ADOBE ILLUSTRATOR</span><span>70%</span></div>
-              <div class="bg-[#111] h-2 rounded-md"><div class="bg-pink-500 h-2 rounded-md w-[70%]"></div></div>
+              <div class="bg-[#111] h-2 rounded-md"><div class="bg-blue-600 h-2 rounded-md w-[70%]"></div></div>
             </div>
           </div>
         </div>
@@ -62,22 +62,22 @@
           <div class="space-y-4">
             <div>
               <div class="flex justify-between mb-1"><span>PHOTOSHOP</span><span>100%</span></div>
-              <div class="bg-[#111] h-2 rounded-md"><div class="bg-pink-500 h-2 rounded-md w-full"></div></div>
+              <div class="bg-[#111] h-2 rounded-md"><div class="bg-blue-600 h-2 rounded-md w-full"></div></div>
             </div>
 
             <div>
               <div class="flex justify-between mb-1"><span>FIGMA</span><span>95%</span></div>
-              <div class="bg-[#111] h-2 rounded-md"><div class="bg-pink-500 h-2 rounded-md w-[95%]"></div></div>
+              <div class="bg-[#111] h-2 rounded-md"><div class="bg-blue-600 h-2 rounded-md w-[95%]"></div></div>
             </div>
 
             <div>
               <div class="flex justify-between mb-1"><span>ADOBE XD</span><span>60%</span></div>
-              <div class="bg-[#111] h-2 rounded-md"><div class="bg-pink-500 h-2 rounded-md w-[60%]"></div></div>
+              <div class="bg-[#111] h-2 rounded-md"><div class="bg-blue-600 h-2 rounded-md w-[60%]"></div></div>
             </div>
 
             <div>
               <div class="flex justify-between mb-1"><span>ADOBE ILLUSTRATOR</span><span>70%</span></div>
-              <div class="bg-[#111] h-2 rounded-md"><div class="bg-pink-500 h-2 rounded-md w-[70%]"></div></div>
+              <div class="bg-[#111] h-2 rounded-md"><div class="bg-blue-600 h-2 rounded-md w-[70%]"></div></div>
             </div>
           </div>
         </div>
@@ -88,7 +88,7 @@
         <div class="md:col-span-2 p-8 rounded-2xl bg-gradient-to-br from-[#0b0b0b] to-[#0b0b0b] border border-[#1f1f1f] overflow-hidden relative">
           <div class="grid grid-cols-12 gap-6 items-center">
             <div class="col-span-4">
-              <div class="text-[6.5rem] md:text-[9rem] font-extrabold text-pink-500 leading-[0.85]">25</div>
+              <div class="text-[6.5rem] md:text-[9rem] font-extrabold text-blue-600 leading-[0.85]">25</div>
             </div>
 
             <div class="col-span-8 pl-4 md:pl-10">
@@ -133,7 +133,7 @@
             <div class="space-y-6">
               <div class="flex items-center gap-4">
                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#23263a] border border-[#333]">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m8 0a4 4 0 11-8 0 4 4 0 018 0zm0 0v4m0-4V8" /></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m8 0a4 4 0 11-8 0 4 4 0 018 0zm0 0v4m0-4V8" /></svg>
                 </span>
                 <div>
                   <div class="text-gray-300 text-sm">E-mail:</div>
@@ -142,7 +142,7 @@
               </div>
               <div class="flex items-center gap-4">
                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#23263a] border border-[#333]">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.104 0 2-.896 2-2s-.896-2-2-2-2 .896-2 2 .896 2 2 2zm0 0v6m0-6V5" /></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.104 0 2-.896 2-2s-.896-2-2-2-2 .896-2 2 .896 2 2 2zm0 0v6m0-6V5" /></svg>
                 </span>
                 <div>
                   <div class="text-gray-300 text-sm">Location:</div>
@@ -151,7 +151,7 @@
               </div>
               <div class="flex items-center gap-4">
                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#23263a] border border-[#333]">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.104 0 2-.896 2-2s-.896-2-2-2-2 .896-2 2 .896 2 2 2zm0 0v6m0-6V5" /></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.104 0 2-.896 2-2s-.896-2-2-2-2 .896-2 2 .896 2 2 2zm0 0v6m0-6V5" /></svg>
                 </span>
                 <div>
                   <div class="text-gray-300 text-sm">Contact:</div>
@@ -171,7 +171,7 @@
               <input type="text" placeholder="Subject" class="p-4 rounded bg-[#181c2a] border border-[#333] text-white placeholder-gray-400 md:col-span-2" />
               <textarea placeholder="Your Message" class="col-span-1 md:col-span-2 p-4 rounded bg-[#181c2a] border border-[#333] text-white placeholder-gray-400" rows="5"></textarea>
               <div class="col-span-1 md:col-span-2">
-                <button class="w-full bg-pink-500 text-white py-4 rounded-full font-semibold text-lg">Appointment Now →</button>
+                <button class="w-full bg-blue-600 text-white py-4 rounded-full font-semibold text-lg">Appointment Now →</button>
               </div>
             </form>
           </div>
