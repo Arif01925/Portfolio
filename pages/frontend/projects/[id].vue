@@ -50,6 +50,12 @@
       </div>
     </div>
 
+    <!-- Debug panel (shows when fetchError or loading present) -->
+    <div class="max-w-5xl mx-auto mt-8 text-sm text-gray-300" v-if="fetchError || loading">
+      <div v-if="loading">Loading project...</div>
+      <div v-if="fetchError" class="text-red-400">Error: {{ fetchError }}</div>
+    </div>
+
     <!-- Lightbox Modal -->
     <div
       v-if="showLightbox"
@@ -86,17 +92,63 @@ import { useRoute } from 'vue-router'
 import { ref, onMounted } from 'vue'
 
 const route = useRoute()
-const project = ref({})
+const project = ref({
+  id: null,
+  title: '',
+  description: '',
+  date: null,
+  type: null,
+  thumbnail: null,
+  images: []
+})
 const showLightbox = ref(false)
 const activeImage = ref(0)
 
+const loading = ref(false)
+const fetchError = ref(null)
+
 const fetchProject = async () => {
-  const res = await fetch(`/api/projects/${route.params.id}`)
-  const data = await res.json()
+  loading.value = true
+  fetchError.value = null
+  try {
+    const url = `/api/projects/${route.params.id}`
+    const res = await fetch(url)
+    if (res.ok) {
+      const data = await res.json()
+      if (!data.images) data.images = []
   project.value = data
+      console.log('fetchProject -> project', project.value)
+      loading.value = false
+      return
+    }
+
+    // If single-project endpoint failed (404 or other), try fetching the list and find by id/slug
+    console.warn('Project fetch failed, trying list fallback', res.status)
+    const listRes = await fetch('/api/projects')
+    if (!listRes.ok) {
+      fetchError.value = `Project not found and list fallback failed: ${listRes.status}`
+      loading.value = false
+      return
+    }
+    const list = await listRes.json()
+    const match = list.find(p => String(p.id) === String(route.params.id) || String(p.slug) === String(route.params.id))
+    if (match) {
+      if (!match.images) match.images = []
+  project.value = match
+      loading.value = false
+      return
+    }
+    fetchError.value = `Project ${route.params.id} not found in list fallback.`
+  } catch (e) {
+    console.error('Error fetching project', e)
+    fetchError.value = e.message
+  } finally {
+    loading.value = false
+  }
 }
 
 const openLightbox = (index) => {
+  if (!project.value.images || project.value.images.length === 0) return
   activeImage.value = index
   showLightbox.value = true
 }
@@ -106,10 +158,12 @@ const closeLightbox = () => {
 }
 
 const prevImage = () => {
+  if (!project.value.images || project.value.images.length === 0) return
   activeImage.value = (activeImage.value - 1 + project.value.images.length) % project.value.images.length
 }
 
 const nextImage = () => {
+  if (!project.value.images || project.value.images.length === 0) return
   activeImage.value = (activeImage.value + 1) % project.value.images.length
 }
 

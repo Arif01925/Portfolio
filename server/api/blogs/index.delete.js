@@ -1,10 +1,18 @@
 import { readFile, writeFile, rm } from 'fs/promises'
 import { join } from 'path'
+import { query } from '../../lib/db'
 
 export default defineEventHandler(async (event) => {
   try {
     const body = await readBody(event)
     const postId = body.id
+
+    // Try deleting from DB first
+    try {
+      await query('DELETE FROM blogs WHERE id = ?', [postId])
+    } catch (dbErr) {
+      console.warn('[BLOG_DB_DELETE_FAILED]', dbErr.message)
+    }
 
     const filePath = join('server', 'data', 'blogs.json')
     const postsData = JSON.parse(await readFile(filePath, 'utf-8'))

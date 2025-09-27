@@ -1,6 +1,7 @@
 import { writeFile, readFile, mkdir } from 'fs/promises';
 import { join, basename } from 'path';
 import formidable from 'formidable';
+import { query } from '../../lib/db'
 
 export default defineEventHandler(async (event) => {
   const uploadDir = join(process.cwd(), 'public', 'images', 'tmp');
@@ -63,6 +64,26 @@ export default defineEventHandler(async (event) => {
 
     existing.push(newProject);
     await writeFile(dbPath, JSON.stringify(existing, null, 2));
+
+    // Try inserting into DB
+    try {
+      await query('INSERT INTO projects (id, title, description, `type`, date, thumbnail) VALUES (?, ?, ?, ?, ?, ?)', [
+        newProject.id,
+        newProject.title,
+        newProject.description,
+        newProject.type,
+        newProject.date,
+        newProject.thumbnail
+      ])
+      // Optionally insert gallery images into a separate table if exists
+      if (galleryImages.length > 0) {
+        for (const img of galleryImages) {
+          await query('INSERT INTO project_images (project_id, url) VALUES (?, ?)', [newProject.id, img])
+        }
+      }
+    } catch (dbErr) {
+      console.warn('[PROJECT_DB_INSERT_FAILED]', dbErr.message)
+    }
 
     return { success: true, project: newProject };
   } catch (err) {

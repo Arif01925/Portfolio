@@ -1,6 +1,7 @@
 import { writeFile, readFile, mkdir } from 'fs/promises'
 import { join, basename } from 'path'
 import formidable from 'formidable'
+import { query } from '../../lib/db'
 
 export default defineEventHandler(async (event) => {
   const uploadDir = join(process.cwd(), 'public', 'images', 'tmp')
@@ -46,9 +47,25 @@ export default defineEventHandler(async (event) => {
       thumbnail,
       slug,
     }
-
     existing.push(newPost)
     await writeFile(dbPath, JSON.stringify(existing, null, 2))
+
+    // Try inserting into DB (non-blocking fallback)
+    try {
+      await query('INSERT INTO blogs (id, title, excerpt, content, category, date, thumbnail, slug) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', [
+        newPost.id,
+        newPost.title,
+        newPost.excerpt,
+        newPost.content,
+        newPost.category,
+        newPost.date,
+        newPost.thumbnail,
+        newPost.slug
+      ])
+    } catch (dbErr) {
+      // Log and continue; JSON remains the source for now
+      console.warn('[BLOG_DB_INSERT_FAILED]', dbErr.message)
+    }
 
     return { success: true, post: newPost }
   } catch (err) {

@@ -1,6 +1,7 @@
 import { readFile, writeFile, mkdir } from 'fs/promises'
 import { join } from 'path'
 import formidable from 'formidable'
+import { query } from '../../lib/db'
 
 export const config = {
   api: {
@@ -56,7 +57,21 @@ export default defineEventHandler(async (event) => {
   }
 
   data[index] = { id, title, description, type, date, thumbnail, images }
-
   await writeFile(dbPath, JSON.stringify(data, null, 2))
+
+  // Try updating DB
+  try {
+    await query('UPDATE projects SET title = ?, description = ?, `type` = ?, date = ?, thumbnail = ? WHERE id = ?', [
+      title, description, type, date, thumbnail, id
+    ])
+    // Simplistic approach: remove existing images and re-insert
+    await query('DELETE FROM project_images WHERE project_id = ?', [id])
+    for (const img of images) {
+      await query('INSERT INTO project_images (project_id, url) VALUES (?, ?)', [id, img])
+    }
+  } catch (dbErr) {
+    console.warn('[PROJECT_DB_UPDATE_FAILED]', dbErr.message)
+  }
+
   return { message: 'Project updated successfully.' }
 })

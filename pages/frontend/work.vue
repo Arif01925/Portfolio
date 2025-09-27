@@ -41,7 +41,7 @@
         :class="['group bg-[#0d1117] p-4 rounded-xl hover:bg-[#1a1f2e] transition duration-300 animate-on-scroll', {'in-view': false}]"
         :data-index="idx + 2"
       >
-        <NuxtLink :to="`/frontend/projects/${project.id}`" class="block overflow-hidden rounded-lg mb-3">
+  <NuxtLink :to="`/frontend/projects/${project.slug || project.id}`" class="block overflow-hidden rounded-lg mb-3">
         <img
         :src="project.thumbnail"
         :alt="project.title"
@@ -50,14 +50,14 @@
         </NuxtLink>
 
         <div class="flex items-center justify-between mt-4">
-          <NuxtLink :to="`/frontend/projects/${project.id}`" class="block">
+          <NuxtLink :to="`/frontend/projects/${project.slug || project.id}`" class="block">
           <h2 class="text-white font-semibold text-md hover:underline mb-1">
           {{ project.title }}
           </h2>
           </NuxtLink>
           
           <NuxtLink
-            :to="`/frontend/projects/${project.id}`"
+            :to="`/frontend/projects/${project.slug || project.id}`"
             class="opacity-0 group-hover:opacity-100 transition duration-300"
           >
             <div

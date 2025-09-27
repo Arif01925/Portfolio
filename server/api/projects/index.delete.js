@@ -1,10 +1,19 @@
 import { readFile, writeFile, rm } from 'fs/promises';
 import { join } from 'path';
+import { query } from '../../lib/db'
 
 export default defineEventHandler(async (event) => {
   try {
     const body = await readBody(event);
     const projectId = body.id;
+
+    // Try deleting from DB
+    try {
+      await query('DELETE FROM projects WHERE id = ?', [projectId])
+      await query('DELETE FROM project_images WHERE project_id = ?', [projectId])
+    } catch (dbErr) {
+      console.warn('[PROJECT_DB_DELETE_FAILED]', dbErr.message)
+    }
 
     const filePath = join('server/data/projects.json');
     const projectsData = JSON.parse(await readFile(filePath, 'utf-8'));
